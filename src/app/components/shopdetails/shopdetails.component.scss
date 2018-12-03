@@ -1,0 +1,26 @@
+#products {
+	background-color: #E43465;
+	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+	@media (orientation: portrait){
+		top: 8vh;
+		height: 45vh;
+		width: 100%;
+	}
+	@media (orientation: landscape){
+		position: relative;
+		right: 0;
+		min-height: 100vh;
+		width: 65%;
+		float: right;
+	}
+}
+
+#shopinfo {
+	display: block;
+	background-color: #5E34E4;
+	min-height: (100vh);
+	position: fixed;
+	@media (orientation: landscape){
+		width: 35%;
+	}	
+}

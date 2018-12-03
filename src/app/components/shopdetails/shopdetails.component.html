@@ -1,0 +1,6 @@
+<jp-shopinfo id="shopinfo" [shop]="activeShop" (onShopEdited)="saveChanges($event)"></jp-shopinfo>
+<jp-products 
+	id="products" 
+	[products]="products" 
+	(onProductAdded)="productAdded($event)">
+</jp-products>

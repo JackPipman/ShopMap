@@ -1,0 +1,23 @@
+<div>
+	<ul>
+		<li clickable *ngFor="let shop of shops;let i = index" (click)="activateShop(shop)">
+			<label>
+				<input type="radio" name="shop"/>
+				{{i+1}}. {{shop.name}} - {{shop.adress}}
+			</label>
+		</li>
+	</ul>
+	<div id="buttons">
+		<button 
+			id="addbtn" 
+			type="button" 
+			[routerLink]="['detail', 'empty']">Add</button>
+		<button 
+			id="editbtn" 
+			type="button" 
+			[disabled]="!activeShopId"
+			[routerLink]="['detail', activeShopId]">Edit</button>
+	</div>
+</div>
+
+

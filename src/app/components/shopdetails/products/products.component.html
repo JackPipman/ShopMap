@@ -1,0 +1,51 @@
+<div>
+	<ul>
+		<li *ngFor="let product of products;let i = index">
+			<p>{{i}} : {{product.name}}</p>
+			<p>{{product.price}}</p>
+			<p>{{product.description}}</p>
+		</li>
+	</ul>
+	<button (click)="newProductOpen()" id="new-product">+</button>
+
+	<form [formGroup]="newProductForm" (ngSubmit)="addProduct()" [ngClass]="{visible: visibility}">
+		<input 
+			type="text" 
+			id="product-name" 
+			required
+			formControlName="name"
+			placeholder="Product name:"
+		>
+
+
+		<input 
+			type="number" 
+			id="price" 
+			formControlName="price" 
+			required
+			placeholder="Price:"
+		>
+
+
+		<input 
+			type="text" 
+			id="description" 
+			formControlName="description" 
+			required
+			placeholder="Description:"
+		>
+
+	<div id="productsBtns">
+		<button 
+			id="addProduct"
+			type="submit"
+			[disabled]="!newProductForm.valid"
+		>Add</button>
+			<button 
+			id="cancelProduct"
+			type="button"
+			(click)="newProductClose()"
+		>Cancel</button>
+	</div>
+</form>
+</div>

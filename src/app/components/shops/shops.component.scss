@@ -1,0 +1,30 @@
+#shopmap {
+	background-color: grey;
+	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+	z-index: 50;
+	@media (orientation: portrait){
+		position: fixed;
+		top: 8vh;
+		height: 45vh;
+		width: 100%;
+	}
+	@media (orientation: landscape){
+		position: fixed;
+		right: 0;
+		height: 92vh;
+		width: 65%;
+		bottom: 0;
+	}
+}
+
+#shoplist {
+	display: block;
+	background-color: #E43465;
+	min-height: (100vh);
+	@media (orientation: landscape){
+		width: 35%;
+	}
+	@media (orientation: portrait) {
+		width: 100%;
+	}	
+}

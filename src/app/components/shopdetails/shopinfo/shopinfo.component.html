@@ -1,0 +1,39 @@
+<form [formGroup]="shopInfoForm" (ngSubmit)="saveChanges()">
+		<input 
+			type="text" 
+			id="shop-name" 
+			required
+			formControlName="name"
+			placeholder="Shop name:"
+		>
+
+
+		<input 
+			type="text" 
+			id="shop-address" 
+			formControlName="address"
+			required
+			placeholder="Shop address:"
+		>
+
+
+		<input 
+			type="text" 
+			id="work-hours" 
+			formControlName="hours"
+			required
+			placeholder="Working hours:"
+		>
+
+	<div id="buttons">
+		<button 
+			id="save"
+			type="submit" 
+			[disabled]="!shopInfoForm.valid"
+		>Save</button>
+			<button 
+			id="cancel"
+			[routerLink]="['']"
+		>Cancel</button>
+	</div>
+</form>
